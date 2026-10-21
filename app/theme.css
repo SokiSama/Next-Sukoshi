@@ -1,0 +1,75 @@
+/* Shared palette for the homepage, journal pages, and legacy routes. */
+:root {
+  --site-theme-bg: #fbfdfe;
+  --site-theme-card: #ffffff;
+  --site-theme-text: #0b0b0b;
+  --site-theme-muted: #555555;
+  --site-theme-line: #e9eef0;
+  --site-theme-soft: #f1f6f7;
+  --site-theme-accent: #d40924;
+  --site-theme-accent-soft: #fbe6e8;
+  --site-theme-accent-strong: #681b1b;
+}
+
+html[data-theme="dark"] {
+  --site-theme-bg: #191c20;
+  --site-theme-card: #24282d;
+  --site-theme-text: #f1f4f5;
+  --site-theme-muted: #b1b9bd;
+  --site-theme-line: #333b42;
+  --site-theme-soft: #283138;
+  --site-theme-accent: #f16a80;
+  --site-theme-accent-soft: #3d242b;
+  --site-theme-accent-strong: #f1a9b5;
+}
+
+body,
+html[data-theme="dark"] body {
+  background: var(--site-theme-bg);
+  color: var(--site-theme-text);
+}
+
+/* Override the older route palettes without changing their layouts. */
+.site.site,
+html[data-theme="dark"] .site.site {
+  --bg: var(--site-theme-bg);
+  --card: var(--site-theme-card);
+  --text: var(--site-theme-text);
+  --muted: var(--site-theme-muted);
+  --line: var(--site-theme-line);
+  --primary: var(--site-theme-accent);
+  --primary-soft: var(--site-theme-accent-soft);
+  --secondary: var(--site-theme-accent);
+  --secondary-soft: var(--site-theme-accent-soft);
+  --link-blue: var(--site-theme-accent);
+  --posts-brown: var(--site-theme-accent);
+  --posts-brown-strong: var(--site-theme-text);
+  --posts-brown-soft: var(--site-theme-accent-soft);
+  --posts-brown-line: var(--site-theme-line);
+  --home-bg: var(--site-theme-bg);
+  --home-card: var(--site-theme-card);
+  --home-text: var(--site-theme-text);
+  --home-muted: var(--site-theme-muted);
+  --home-line: var(--site-theme-line);
+  --home-soft: var(--site-theme-soft);
+  --home-accent: var(--site-theme-accent);
+  --home-accent-soft: var(--site-theme-accent-soft);
+}
+
+.site.site .route-cover__card h1,
+html[data-theme="dark"] .site.site .route-cover__card h1 {
+  color: var(--text);
+}
+.site.site .route-cover__card p,
+html[data-theme="dark"] .site.site .route-cover__card p {
+  color: var(--muted);
+}
+.site.site .site-header.home-floating .primary-nav a,
+html[data-theme="dark"] .site.site .site-header.home-floating .primary-nav a {
+  color: var(--muted);
+}
+.site.site .site-header.home-floating .primary-nav a:is(:hover, .active),
+html[data-theme="dark"] .site.site .site-header.home-floating .primary-nav a:is(:hover, .active) {
+  color: var(--primary);
+  background: var(--primary-soft);
+}

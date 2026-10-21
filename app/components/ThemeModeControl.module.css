@@ -1,0 +1,18 @@
+.compact { display: inline-grid; place-items: center; flex: none; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; color: var(--text); background: transparent; cursor: pointer; }
+.compact:hover { color: var(--primary); }
+.control { display: inline-flex; flex: none; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--home-line); border-radius: 999px; background: color-mix(in srgb, var(--home-text) 3%, var(--home-bg)); }
+.control button { position: relative; display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 999px; color: var(--home-text); background: transparent; cursor: pointer; transition: background-color .18s, color .18s, box-shadow .18s; }
+.control button[aria-pressed="true"] { color: var(--home-text); background: var(--home-card); box-shadow: none; }
+.control button:hover { color: var(--home-text); }
+.control.subtle { gap: 4px; border-color: transparent; background: transparent; }
+.subtle button { border-radius: 8px; color: var(--theme-control-color, #213547); }
+.subtle button[aria-pressed="true"] { color: var(--theme-control-active, #142c40); background: var(--theme-control-selected-bg, #ffffff38); box-shadow: none; }
+.subtle button:hover { color: var(--theme-control-active, #142c40); background: var(--theme-control-hover-bg, #ffffff26); }
+.control button::after { content: attr(data-tooltip); position: absolute; top: calc(100% + 12px); left: 50%; z-index: 1; transform: translate(-50%, -3px); padding: 5px 9px; border: 1px solid var(--home-line); border-radius: 8px; background: var(--home-card); color: var(--home-muted); box-shadow: 0 5px 18px #0000000d; font-size: 12px; line-height: 1.6; white-space: nowrap; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .15s, transform .15s, visibility .15s; }
+.control button:is(:hover, :focus-visible)::after { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+@media (max-width: 420px) { .control { gap: 0; padding: 2px; } .control button { width: 27px; height: 26px; } .control button svg { width: 17px; height: 17px; } }
+@media (prefers-reduced-motion: reduce) { .control button, .control button::after { transition: none; } }
+
+.control { --home-bg:var(--site-theme-bg);--home-card:var(--site-theme-card);--home-text:var(--site-theme-text);--home-muted:var(--site-theme-muted);--home-line:var(--site-theme-line);position:static; }
+.control button::after { top:auto;bottom:calc(100% + 10px); }
+.control button:focus-visible { outline:2px solid var(--site-theme-accent);outline-offset:2px; }

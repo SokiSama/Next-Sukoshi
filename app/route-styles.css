@@ -1,0 +1,3 @@
+/* Legacy route styles stay off the homepage critical path. */
+@import "./globals.css";
+@import "./theme.css";

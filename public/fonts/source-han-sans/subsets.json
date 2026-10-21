@@ -1,0 +1,250 @@
+{
+  "glyphs": 30983,
+  "templateGlyphs": 493,
+  "files": [
+    {
+      "name": "template.woff2",
+      "bytes": 206104
+    },
+    {
+      "name": "cjk-000.woff2",
+      "bytes": 113372
+    },
+    {
+      "name": "cjk-001.woff2",
+      "bytes": 158132
+    },
+    {
+      "name": "cjk-002.woff2",
+      "bytes": 182228
+    },
+    {
+      "name": "cjk-003.woff2",
+      "bytes": 173536
+    },
+    {
+      "name": "cjk-004.woff2",
+      "bytes": 185776
+    },
+    {
+      "name": "cjk-005.woff2",
+      "bytes": 203284
+    },
+    {
+      "name": "cjk-006.woff2",
+      "bytes": 185672
+    },
+    {
+      "name": "cjk-007.woff2",
+      "bytes": 171172
+    },
+    {
+      "name": "cjk-008.woff2",
+      "bytes": 207084
+    },
+    {
+      "name": "cjk-009.woff2",
+      "bytes": 194012
+    },
+    {
+      "name": "cjk-010.woff2",
+      "bytes": 184420
+    },
+    {
+      "name": "cjk-011.woff2",
+      "bytes": 183772
+    },
+    {
+      "name": "cjk-012.woff2",
+      "bytes": 194252
+    },
+    {
+      "name": "cjk-013.woff2",
+      "bytes": 210708
+    },
+    {
+      "name": "cjk-014.woff2",
+      "bytes": 181760
+    },
+    {
+      "name": "cjk-015.woff2",
+      "bytes": 250160
+    },
+    {
+      "name": "cjk-016.woff2",
+      "bytes": 202956
+    },
+    {
+      "name": "cjk-017.woff2",
+      "bytes": 239812
+    },
+    {
+      "name": "cjk-018.woff2",
+      "bytes": 216256
+    },
+    {
+      "name": "cjk-019.woff2",
+      "bytes": 293096
+    },
+    {
+      "name": "cjk-020.woff2",
+      "bytes": 273316
+    },
+    {
+      "name": "cjk-021.woff2",
+      "bytes": 256712
+    },
+    {
+      "name": "cjk-022.woff2",
+      "bytes": 237944
+    },
+    {
+      "name": "cjk-023.woff2",
+      "bytes": 273612
+    },
+    {
+      "name": "cjk-024.woff2",
+      "bytes": 290120
+    },
+    {
+      "name": "cjk-025.woff2",
+      "bytes": 245324
+    },
+    {
+      "name": "cjk-026.woff2",
+      "bytes": 219208
+    },
+    {
+      "name": "cjk-027.woff2",
+      "bytes": 327200
+    },
+    {
+      "name": "cjk-028.woff2",
+      "bytes": 224444
+    },
+    {
+      "name": "cjk-029.woff2",
+      "bytes": 269608
+    },
+    {
+      "name": "cjk-030.woff2",
+      "bytes": 315080
+    },
+    {
+      "name": "cjk-031.woff2",
+      "bytes": 302944
+    },
+    {
+      "name": "cjk-032.woff2",
+      "bytes": 266968
+    },
+    {
+      "name": "cjk-033.woff2",
+      "bytes": 242068
+    },
+    {
+      "name": "cjk-034.woff2",
+      "bytes": 242576
+    },
+    {
+      "name": "cjk-035.woff2",
+      "bytes": 306208
+    },
+    {
+      "name": "cjk-036.woff2",
+      "bytes": 352528
+    },
+    {
+      "name": "cjk-037.woff2",
+      "bytes": 325728
+    },
+    {
+      "name": "cjk-038.woff2",
+      "bytes": 311016
+    },
+    {
+      "name": "cjk-039.woff2",
+      "bytes": 264816
+    },
+    {
+      "name": "cjk-040.woff2",
+      "bytes": 302704
+    },
+    {
+      "name": "cjk-041.woff2",
+      "bytes": 307988
+    },
+    {
+      "name": "cjk-042.woff2",
+      "bytes": 328856
+    },
+    {
+      "name": "cjk-043.woff2",
+      "bytes": 278356
+    },
+    {
+      "name": "cjk-044.woff2",
+      "bytes": 228948
+    },
+    {
+      "name": "cjk-045.woff2",
+      "bytes": 255084
+    },
+    {
+      "name": "cjk-046.woff2",
+      "bytes": 324680
+    },
+    {
+      "name": "cjk-047.woff2",
+      "bytes": 292964
+    },
+    {
+      "name": "cjk-048.woff2",
+      "bytes": 234060
+    },
+    {
+      "name": "cjk-049.woff2",
+      "bytes": 270524
+    },
+    {
+      "name": "cjk-050.woff2",
+      "bytes": 291852
+    },
+    {
+      "name": "cjk-051.woff2",
+      "bytes": 323096
+    },
+    {
+      "name": "cjk-052.woff2",
+      "bytes": 292984
+    },
+    {
+      "name": "cjk-053.woff2",
+      "bytes": 327992
+    },
+    {
+      "name": "cjk-054.woff2",
+      "bytes": 150688
+    },
+    {
+      "name": "cjk-055.woff2",
+      "bytes": 171740
+    },
+    {
+      "name": "cjk-056.woff2",
+      "bytes": 185908
+    },
+    {
+      "name": "cjk-057.woff2",
+      "bytes": 190980
+    },
+    {
+      "name": "cjk-058.woff2",
+      "bytes": 204984
+    },
+    {
+      "name": "cjk-059.woff2",
+      "bytes": 104288
+    }
+  ]
+}

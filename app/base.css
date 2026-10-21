@@ -1,0 +1,35 @@
+/* Shared resets, accessibility rules and document transitions. */
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --site-max-width: 1500px;
+  --page-gutter: 18px;
+  --site-header-height: 60px;
+  --sidebar-sticky-gap: 16px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f3f5f9; color: #263042; font-family: var(--font-site-sans); transition: background-color .32s cubic-bezier(.22,.61,.36,1), color .26s ease; }
+html[data-theme="dark"] body { background: #15161b; color: #edeef3; color-scheme: dark; }
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; }
+button, a { transition-timing-function: cubic-bezier(.4, 0, .2, 1); }
+input, textarea { transition: background-color .32s cubic-bezier(.22,.61,.36,1), color .26s ease, border-color .32s ease, box-shadow .32s ease; }
+
+@view-transition { navigation: auto; }
+::view-transition-group(primary-nav-active) { animation-duration: .25s; animation-timing-function: ease; }
+main { view-transition-name: page-content; animation: sanekoFadeIn 260ms ease-out both !important; }
+::view-transition-old(page-content) { animation: sanekoFadeIn 140ms ease-in reverse both !important; }
+::view-transition-new(page-content) { animation: sanekoFadeUp 360ms cubic-bezier(.22, .8, .25, 1) both !important; }
+::view-transition-old(persistent-site-header), ::view-transition-new(persistent-site-header) { animation: none !important; }
+@keyframes sanekoFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sanekoFadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 900px) { :root { --page-gutter: 12px; } }
+@media (max-width: 768px) { :root { --site-header-height: 56px; } }
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+  main, ::view-transition-old(page-content), ::view-transition-new(page-content) { animation: none !important; }
+}

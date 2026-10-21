@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+.vercel/
+.pnpm-store/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+*.bundle
+*.zip
+.DS_Store
+Thumbs.db

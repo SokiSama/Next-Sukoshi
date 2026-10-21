@@ -1,0 +1,53 @@
+@keyframes journal-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes journal-navigation-reveal {
+  from { opacity: 0; transform: translateY(2rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes journal-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes journal-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes journal-dialog-in {
+  from { opacity: 0; transform: translateY(8px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+[data-motion-state="pending"] { opacity: 0; }
+[data-motion-state="visible"] { animation: journal-reveal .32s ease var(--reveal-delay, 0ms) backwards; }
+[data-motion-preset="navigation"][data-motion-state="visible"] { animation: journal-navigation-reveal .3s ease var(--reveal-delay, 0ms) backwards; }
+[data-motion-state="pending"]:focus-within { opacity: 1; }
+dialog[open] { animation: journal-dialog-in .2s cubic-bezier(.22, 1, .36, 1); }
+dialog[open]::backdrop { animation: journal-fade-in .2s ease; }
+::view-transition-old(root) { animation: journal-fade-out .2s ease-out; }
+::view-transition-new(root) { animation: journal-fade-in .2s ease-in; }
+html.theme-transitioning *, html.theme-transitioning *::before, html.theme-transitioning *::after { view-transition-name: none !important; }
+html.theme-transitioning::view-transition-group(root) { animation: none; }
+html.theme-transitioning::view-transition-old(root),
+html.theme-transitioning::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+html.theme-transitioning::view-transition-old(root) { z-index: 1; }
+html.theme-transitioning::view-transition-new(root) { z-index: 2; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-motion-state], [data-motion-preset="navigation"][data-motion-state] { opacity: 1; animation: none; transform: none; filter: none; }
+  dialog[open], dialog[open]::backdrop,
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+
+/* Saneko/Pure-style entrances: 300ms rise, staggered header/content/sidebar.
+   Two equal keyframes restart retained DOM when navigating between articles. */
+@keyframes journal-page-enter-a {
+  from { opacity: 0; transform: translateY(2rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes journal-page-enter-b {
+  from { opacity: 0; transform: translateY(2rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+:root body main[data-page-transition] { animation: none !important; }
+/* Legacy page styles start at opacity 0; restore the resting state after the entrance. */
+:root body main[data-page-transition] [data-page-enter] { opacity: 1; }
+:root body main[data-page-transition="a"] [data-page-enter] { animation: journal-page-enter-a .3s ease var(--page-enter-delay, 100ms) backwards !important; }
+:root body main[data-page-transition="b"] [data-page-enter] { animation: journal-page-enter-b .3s ease var(--page-enter-delay, 100ms) backwards !important; }
+@media (prefers-reduced-motion: reduce) {
+  :root body main[data-page-transition] [data-page-enter] { animation: none !important; opacity: 1; transform: none; }
+}

@@ -1,0 +1,7 @@
+.links { display: flex; align-items: center; gap: 12px; margin: 0; }
+.link { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 44px; flex: none; color: #000; border-radius: 4px; transition: transform .2s ease, opacity .2s ease; }
+.link svg { display: block; width: 24px; height: 24px; overflow: visible; }
+.link:is(:hover, :focus-visible) { color: #000; opacity: .65; transform: translateY(-3px); }
+:global(html[data-theme="dark"]) .link { color: #fff; }
+@media (max-width: 680px) { .links { justify-content: center; gap: 4px; } .link { width: 28px; } .link svg { width: 22px; height: 22px; } }
+@media (prefers-reduced-motion: reduce) { .link { animation: none; transition: none; } .link:is(:hover, :focus-visible) { transform: none; } }

@@ -1,0 +1,10 @@
+.searchBox { position: relative; }
+.searchResults { position: absolute; z-index: 50; top: calc(100% + 10px); right: 0; width: 340px; max-width: calc(100vw - 32px); max-height: 350px; overflow: auto; padding: 7px; margin: 0; list-style: none; border: 1px solid var(--home-line); border-radius: 12px; background: var(--home-card); box-shadow: 0 12px 32px #00000010; }
+.searchResults a { display: flex; flex-direction: column; gap: 3px; padding: 10px; border-radius: 7px; color: var(--home-text); font-size: 13px; line-height: 1.5; }
+.searchResults a:hover { background: var(--home-accent-soft); color: var(--home-accent); }
+.searchResults time { color: var(--home-muted); font-size: 11px; }
+.searchEmpty { padding: 16px 10px; font-size: 13px; }
+
+@media (max-width: 420px) {
+  .searchBox { position: absolute; }
+}
